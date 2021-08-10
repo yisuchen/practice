@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\練習題\\pratice1\\pratice1\\pratice1.csproj": {}
+    "D:\\practice\\pratice1\\pratice1\\pratice1.csproj": {}
   },
   "projects": {
-    "D:\\練習題\\pratice1\\pratice1\\pratice1.csproj": {
+    "D:\\practice\\pratice1\\pratice1\\pratice1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\練習題\\pratice1\\pratice1\\pratice1.csproj",
+        "projectUniqueName": "D:\\practice\\pratice1\\pratice1\\pratice1.csproj",
         "projectName": "pratice1",
-        "projectPath": "D:\\練習題\\pratice1\\pratice1\\pratice1.csproj",
+        "projectPath": "D:\\practice\\pratice1\\pratice1\\pratice1.csproj",
         "packagesPath": "C:\\Users\\yisu.chen\\.nuget\\packages\\",
-        "outputPath": "D:\\練習題\\pratice1\\pratice1\\obj\\",
+        "outputPath": "D:\\practice\\pratice1\\pratice1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

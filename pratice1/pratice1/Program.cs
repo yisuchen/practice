@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace pratice1
 {
@@ -88,30 +89,31 @@ namespace pratice1
                     continue;
                 }
                 else {
-                    resultList.Add(num); 
+                    resultList.Add(num);  // 加入list
                 }
             }
 
             for (var i = 0; i < zeroCount; i++)
             {
-                resultList.Add(0);
+                resultList.Add(0); // 依 count 次數 插入 0
             }
-            string result = string.Empty;
-            foreach(var temp in resultList)
-            {
-                Console.WriteLine(temp);
-            }
+
+            Console.WriteLine("[{0}]", string.Join(", ", resultList));
             Console.ReadKey();
         }
         #endregion
 
-        #region 3-3 test
+        #region 第三題 2次嘗試
         /// <summary>
         /// 數字陣列裡所有0的元素移到最後面
         /// </summary>
         /// <param name="nums"></param>
         public static void MoveZeroes2(int[] nums)
         {
+            // memo
+            // 找到 0 記住 index
+            // 找到其他數字 => 與0的index對換
+            // index ++
             int index = -1;
             for (int i = 0; i < nums.Length; i++)
             {
@@ -131,24 +133,22 @@ namespace pratice1
                     index++;//第一個0的位置往後移一位
                 }
             }
-        
-            foreach(var temp in nums)
-            {
-                Console.WriteLine(temp);
-            }
+
+            Console.WriteLine("[{0}]", string.Join(", ", nums));
             Console.ReadKey();
         }
 
         #endregion
         static void Main(string[] args)
         {
-            //int[] nums = new int[] { 4, 1, 2, 1, 2 };
-            //Console.WriteLine(SingleNumber(nums));
+            // #1
+            int[] nums1 = new int[] { 4, 1, 2, 1, 2 };
+            Console.WriteLine(SingleNumber(nums1));
 
-            //Console.WriteLine(IsPowerOfThree(0));
+            // #2
+            Console.WriteLine(IsPowerOfThree(0));
 
-            //Console.ReadKey();
-
+            // #3
             int[] nums = new int[] { 0, 12, 0, 1, 3 };
             MoveZeroes2(nums);
         }
