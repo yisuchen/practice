@@ -5,7 +5,7 @@ using System.Text;
 
 namespace pratice1
 {
-    class Program
+    public class Program
     {
         #region 第一題
         /// <summary>
@@ -13,7 +13,7 @@ namespace pratice1
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
-        public static int SingleNumber(int[] nums)
+        public int SingleNumber(int[] nums)
         {
             // memo
             //建一陣列提供暫時存放, 判斷是否有key已在陣列
@@ -50,7 +50,7 @@ namespace pratice1
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static bool IsPowerOfThree(int number) 
+        public bool IsPowerOfThree(int number) 
         {
             // memo
             // 以3為基礎, 如小於傳入數值, 持續*3
@@ -76,7 +76,7 @@ namespace pratice1
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
-        public static void MoveZeroes(int[] nums)
+        public int[] MoveZeroes(int[] nums)
         {
             // memo 
             // 遍尋陣列  0=>計數   !=0 => Add List
@@ -97,9 +97,7 @@ namespace pratice1
             {
                 resultList.Add(0); // 依 count 次數 插入 0
             }
-
-            Console.WriteLine("[{0}]", string.Join(", ", resultList));
-            Console.ReadKey();
+            return (resultList.ToArray());
         }
         #endregion
 
@@ -108,7 +106,7 @@ namespace pratice1
         /// 數字陣列裡所有0的元素移到最後面
         /// </summary>
         /// <param name="nums"></param>
-        public static void MoveZeroes2(int[] nums)
+        public int[] MoveZeroes2(int[] nums)
         {
             // memo
             // 找到 0 記住 index
@@ -133,24 +131,43 @@ namespace pratice1
                     index++;//第一個0的位置往後移一位
                 }
             }
-
-            Console.WriteLine("[{0}]", string.Join(", ", nums));
-            Console.ReadKey();
+            return nums;
+            //Console.WriteLine("[{0}]", string.Join(", ", nums));
+            //Console.ReadKey();
         }
 
         #endregion
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Program program = new Program();
             // #1
             int[] nums1 = new int[] { 4, 1, 2, 1, 2 };
-            Console.WriteLine(SingleNumber(nums1));
+            Console.WriteLine(program.SingleNumber(nums1));
 
             // #2
-            Console.WriteLine(IsPowerOfThree(0));
+            Console.WriteLine(program.IsPowerOfThree(0));
 
             // #3
             int[] nums = new int[] { 0, 12, 0, 1, 3 };
-            MoveZeroes2(nums);
+            program.MoveZeroes2(nums);
+        }
+    }
+
+    public class Calculator
+    {
+        public int Add (int firstNumber, int secondNumber)
+        {
+            return firstNumber + secondNumber;
+        }
+
+        public int Minus(int firsrNumber, int secondNumber)
+        {
+            return firsrNumber - secondNumber;
+        }
+
+        public void SomeMethod()
+        {
+            throw new NotImplementedException();
         }
     }
 }
