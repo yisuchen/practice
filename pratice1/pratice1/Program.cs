@@ -171,10 +171,5 @@ namespace pratice1
         }
     }
 
-    public interface IMobilePhone
-    {
-        public void CallNumber(string number);
-        public void ModifyValue(int value);
-    }
 
 }
