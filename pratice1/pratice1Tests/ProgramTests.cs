@@ -1,10 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using pratice1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pratice1.Tests
 {
@@ -12,7 +6,7 @@ namespace pratice1.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void Get_Number_In_Array_Not_Repeat_Case1()
+        public void SingleNumberTest_4_1_2_1_2_5_5()
         {
             // arrange
             Program target = new Program();
@@ -26,7 +20,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void Get_Number_In_Array_Not_Repeat_Case2()
+        public void SingleNumberTest_2_2_1()
         {
             // arrange
             Program target = new Program();
@@ -40,7 +34,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void Get_Number_In_Array_Not_Repeat_Case3()
+        public void SingleNumberTest_4_1_2_1_2()
         {
             // arrange
             Program target = new Program();
@@ -54,7 +48,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void IsPowerOfThreeTest_Case1()
+        public void IsPowerOfThreeTest_27()
         {
             // arrange
             Program target = new Program();
@@ -67,7 +61,7 @@ namespace pratice1.Tests
             Assert.AreEqual(actual, expect);
         }
         [TestMethod()]
-        public void IsPowerOfThreeTest_Case2()
+        public void IsPowerOfThreeTest_45()
         {
             // arrange
             Program target = new Program();
@@ -80,7 +74,7 @@ namespace pratice1.Tests
             Assert.AreEqual(actual, expect);
         }
         [TestMethod()]
-        public void IsPowerOfThreeTest_Case3()
+        public void IsPowerOfThreeTest_9()
         {
             // arrange
             Program target = new Program();
@@ -93,7 +87,7 @@ namespace pratice1.Tests
             Assert.AreEqual(actual, expect);
         }
         [TestMethod()]
-        public void IsPowerOfThreeTest_Case4()
+        public void IsPowerOfThreeTest_0()
         {
             // arrange
             Program target = new Program();
@@ -107,7 +101,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void MoveZeroesTest()
+        public void MoveZeroesTest_0_12_0_1_3()
         {
             // arrange
             Program target = new Program();
@@ -129,7 +123,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void MoveZeroes2Test()
+        public void MoveZeroes2Test_0_12_0_1_3_5_4_3()
         {
             // arrange
             Program target = new Program();

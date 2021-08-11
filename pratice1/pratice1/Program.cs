@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 namespace pratice1
 {
     public class Program
@@ -149,7 +148,8 @@ namespace pratice1
 
             // #3
             int[] nums = new int[] { 0, 12, 0, 1, 3 };
-            program.MoveZeroes2(nums);
+            Console.WriteLine("[{0}]",string.Join(", ", program.MoveZeroes2(nums))) ;
+
         }
     }
 
@@ -170,4 +170,11 @@ namespace pratice1
             throw new NotImplementedException();
         }
     }
+
+    public interface IMobilePhone
+    {
+        public void CallNumber(string number);
+        public void ModifyValue(int value);
+    }
+
 }

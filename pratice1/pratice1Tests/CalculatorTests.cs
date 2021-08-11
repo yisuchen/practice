@@ -12,7 +12,7 @@ namespace pratice1.Tests
     public class CalculatorTests
     {
         [TestMethod()]
-        public void Add_Input_First_Second2_Return3()
+        public void AddTest_5_10()
         {
             // arrange
             Calculator target = new Calculator();  // TODO 初始化
@@ -27,7 +27,7 @@ namespace pratice1.Tests
         }
 
         [TestMethod()]
-        public void Minus_Input_First_Second2_Return3()
+        public void MinusTest_50_10()
         {
             // arrange
             Calculator target = new Calculator();  // TODO 初始化
