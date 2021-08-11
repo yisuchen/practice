@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using pratice1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace pratice1.Tests
 {
@@ -142,6 +143,20 @@ namespace pratice1.Tests
                     result = false;
             }
             Assert.IsTrue(result);
+        }
+
+        [TestMethod()]
+        public void SingleNumber2Test()
+        {
+            // arrange
+            Program target = new Program();
+            int[] nums = new int[] { 4, 1, 2, 1, 2, 5, 5 };
+            int expect = 4;
+            int actual;
+            // act
+            actual = target.SingleNumber2(nums);
+            // assert
+            Assert.AreEqual(expect, actual);
         }
     }
 }

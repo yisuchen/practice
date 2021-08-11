@@ -19,19 +19,20 @@ namespace pratice1
             //yes = delete
             //no = insert
             List<int> tempList = new List<int>();
-            foreach(var num in nums)
+            foreach (var num in nums)
             {
                 //初始第一次
-                if (tempList.Count == 0) { 
+                if (tempList.Count == 0)
+                {
                     tempList.Add(num);
                     continue;
                 }
                 else
                 {
                     //如有相符元素, 則做刪除, 減少陣列長度
-                    foreach(var tempNum in tempList)
+                    foreach (var tempNum in tempList)
                     {
-                        if(tempNum == num)
+                        if (tempNum == num)
                         {
                             tempList.Remove(tempNum);
                             break;
@@ -43,13 +44,31 @@ namespace pratice1
         }
         #endregion
 
+        #region 第一題 - 2
+        
+        /// <summary>
+        /// 利用 XOR 邏輯 找出陣列中不重複的數字
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int SingleNumber2(int[] nums)
+        {
+            int val = 0;
+            foreach(var num in nums)
+            {
+                val = val ^ num;
+            }
+            return val;
+        }
+        #endregion
+
         #region 第二題
         /// <summary>
         /// 判斷是否為3的乘冪
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public bool IsPowerOfThree(int number) 
+        public bool IsPowerOfThree(int number)
         {
             // memo
             // 以3為基礎, 如小於傳入數值, 持續*3
@@ -57,13 +76,14 @@ namespace pratice1
             bool result = false;
             int tempNumber = 3;
 
-            while(tempNumber < number)
+            while (tempNumber < number)
             {
                 tempNumber = tempNumber * 3;
             }
             //判斷是否相同
-            if(tempNumber == number) { 
-                result = true; 
+            if (tempNumber == number)
+            {
+                result = true;
             }
             return result;
         }
@@ -81,13 +101,15 @@ namespace pratice1
             // 遍尋陣列  0=>計數   !=0 => Add List
             int zeroCount = 0;
             List<int> resultList = new List<int>();
-            foreach(var num in nums)
+            foreach (var num in nums)
             {
-                if (num == 0) { 
+                if (num == 0)
+                {
                     zeroCount++;
                     continue;
                 }
-                else {
+                else
+                {
                     resultList.Add(num);  // 加入list
                 }
             }
@@ -114,7 +136,7 @@ namespace pratice1
             int index = -1;
             for (int i = 0; i < nums.Length; i++)
             {
-                int temp = nums[i]; //迴圈現在指到的數字
+                int temp = nums[i]; //迴圈現在指到的數字  0,12,0,1,3  index = 1
                 if (temp == 0)
                 {
                     if (index == -1)//第一個0的位置
@@ -125,7 +147,7 @@ namespace pratice1
                 {
                     if (index == -1)
                         continue;
-                    nums[i] = nums[index];
+                    nums[i] = nums[index] ;
                     nums[index] = temp;
                     index++;//第一個0的位置往後移一位
                 }
@@ -134,7 +156,6 @@ namespace pratice1
             //Console.WriteLine("[{0}]", string.Join(", ", nums));
             //Console.ReadKey();
         }
-
         #endregion
         public static void Main(string[] args)
         {
@@ -148,14 +169,14 @@ namespace pratice1
 
             // #3
             int[] nums = new int[] { 0, 12, 0, 1, 3 };
-            Console.WriteLine("[{0}]",string.Join(", ", program.MoveZeroes2(nums))) ;
+            Console.WriteLine("[{0}]", string.Join(", ", program.MoveZeroes2(nums)));
 
         }
     }
 
     public class Calculator
     {
-        public int Add (int firstNumber, int secondNumber)
+        public int Add(int firstNumber, int secondNumber)
         {
             return firstNumber + secondNumber;
         }
